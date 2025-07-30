@@ -1,18 +1,32 @@
 // API Configuration for SaptMarkets Delivery App
+import { CURRENT_CONFIG, API_ENDPOINTS } from './environment';
 
 // ===============================================
 // ENVIRONMENT CONFIGURATION
 // ===============================================
-// Uncomment the appropriate line based on your testing setup:
+// The configuration is now managed through the environment.js file
+// This provides better environment management and security
+
+// Export the current configuration
+export const API_BASE_URL = CURRENT_CONFIG.API_BASE_URL;
+export const SOCKET_URL = CURRENT_CONFIG.SOCKET_URL;
+export const IMAGE_BASE_URL = CURRENT_CONFIG.IMAGE_BASE_URL;
+
+// ===============================================
+// ENVIRONMENT-SPECIFIC SETUP INSTRUCTIONS
+// ===============================================
 
 // For Android Emulator (default)
-// export const API_BASE_URL = 'http://10.0.2.2:5055';  // Removed /api since it's included in endpoints
+// Update app.json extra section:
+// "EXPO_PUBLIC_API_BASE_URL": "http://10.0.2.2:5055"
 
-// For Physical Android Device (replace with your computer's IP)
-export const API_BASE_URL = 'http://192.168.100.171:5055';
+// For Physical Android Device
+// Update app.json extra section:
+// "EXPO_PUBLIC_API_BASE_URL": "http://YOUR_COMPUTER_IP:5055"
 
 // For iOS Simulator
-// export const API_BASE_URL = 'http://localhost:5055';
+// Update app.json extra section:
+// "EXPO_PUBLIC_API_BASE_URL": "http://localhost:5055"
 
 // ===============================================
 // 🚨 IMPORTANT: FOR PHYSICAL DEVICES
@@ -21,57 +35,30 @@ export const API_BASE_URL = 'http://192.168.100.171:5055';
 // 1. Find your computer's IP address:
 //    - Windows: Run 'ipconfig' in cmd, look for IPv4 Address
 //    - Mac/Linux: Run 'ifconfig' in terminal, look for inet address
-// 2. Replace 192.168.1.100 above with your actual IP
+// 2. Update the EXPO_PUBLIC_API_BASE_URL in app.json
 // 3. Make sure your phone and computer are on the same WiFi network
-// 4. Uncomment the physical device line and comment out the emulator line
-
-// ===============================================
-// SOCKET & IMAGE URLS
-// ===============================================
-export const SOCKET_URL = 'http://192.168.100.171:5055';
-export const IMAGE_BASE_URL = 'http://192.168.100.171:5055/uploads/';
+// 4. Restart the Expo development server
 
 // ===============================================
 // API ENDPOINTS FOR MOBILE DELIVERY APP
 // ===============================================
-export const API_ENDPOINTS = {
-  // Auth
-  LOGIN: '/api/mobile-delivery/login',  // Updated to match backend
-  LOGOUT: '/api/mobile-delivery/logout',
-  PROFILE: '/api/mobile-delivery/profile',
-
-  // Shift Management
-  CLOCK_IN: '/api/mobile-delivery/clock-in',
-  CLOCK_OUT: '/api/mobile-delivery/clock-out',
-  BREAK_IN: '/api/mobile-delivery/break-in',
-  BREAK_OUT: '/api/mobile-delivery/break-out',
-  
-  // Orders
-  GET_ORDERS: '/api/mobile-delivery/orders',
-  GET_ORDER_DETAILS: '/api/mobile-delivery/orders', // Appends /:id
-  GET_ASSIGNED_ORDERS: '/api/mobile-delivery/orders', // Uses same endpoint but filters on client side
-  
-  // Order Actions - FIXED ENDPOINTS
-  TOGGLE_PRODUCT: '/api/mobile-delivery/orders', // Will append /:orderId/toggle-product
-  MARK_OUT_FOR_DELIVERY: '/api/mobile-delivery/orders', // Will append /:orderId/out-for-delivery
-  COMPLETE_DELIVERY: '/api/mobile-delivery/orders', // Will append /:orderId/complete
-  ACCEPT_ORDER: '/api/mobile-delivery/orders', // Will append /:orderId/accept
-  
-  // Billing
-  GENERATE_BILL: '/api/mobile-delivery/orders', // Will append /:orderId/bill
-  PRINT_BILL: '/api/mobile-delivery/orders', // Will append /:orderId/print-bill
-
-  // Earnings
-  GET_TODAY_EARNINGS: '/api/mobile-delivery/earnings/today',
-  GET_COMPLETED_ORDERS: '/api/mobile-delivery/orders/completed',
-  
-  // Location
-  UPDATE_LOCATION: '/api/mobile-delivery/location/update'
-}; 
+export { API_ENDPOINTS };
 
 // ===============================================
 // TEST CREDENTIALS (For Development Only)
 // ===============================================
 // Driver Account:
 // Email: driver@saptmarkets.com
-// Password: password123 
+// Password: password123
+
+// ===============================================
+// ENVIRONMENT VARIABLES USAGE
+// ===============================================
+// To change environment variables:
+// 1. Update the values in app.json under "extra" section
+// 2. Restart the Expo development server
+// 3. Rebuild the app if needed
+
+// Example for production:
+// "EXPO_PUBLIC_API_BASE_URL": "https://api.saptmarkets.com",
+// "EXPO_PUBLIC_ENV": "production" 

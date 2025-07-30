@@ -28,6 +28,10 @@ export const IMAGE_BASE_URL = CURRENT_CONFIG.IMAGE_BASE_URL;
 // Update app.json extra section:
 // "EXPO_PUBLIC_API_BASE_URL": "http://localhost:5055"
 
+// For Render Backend (Current Setup)
+// Update app.json extra section:
+// "EXPO_PUBLIC_API_BASE_URL": "https://e-commerce-backend-l0s0.onrender.com/api"
+
 // ===============================================
 // 🚨 IMPORTANT: FOR PHYSICAL DEVICES
 // ===============================================

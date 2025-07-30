@@ -14,9 +14,9 @@ const getEnvVar = (key, defaultValue = '') => {
 // Environment Configuration
 export const ENV_CONFIG = {
   // Backend API URLs
-  API_BASE_URL: getEnvVar('EXPO_PUBLIC_API_BASE_URL', 'http://192.168.100.171:5055'),
-  SOCKET_URL: getEnvVar('EXPO_PUBLIC_SOCKET_URL', 'http://192.168.100.171:5055'),
-  IMAGE_BASE_URL: getEnvVar('EXPO_PUBLIC_IMAGE_BASE_URL', 'http://192.168.100.171:5055/uploads/'),
+  API_BASE_URL: getEnvVar('EXPO_PUBLIC_API_BASE_URL', 'https://e-commerce-backend-l0s0.onrender.com/api'),
+  SOCKET_URL: getEnvVar('EXPO_PUBLIC_SOCKET_URL', 'https://e-commerce-backend-l0s0.onrender.com'),
+  IMAGE_BASE_URL: getEnvVar('EXPO_PUBLIC_IMAGE_BASE_URL', 'https://e-commerce-backend-l0s0.onrender.com/uploads/'),
   
   // Environment
   ENV: getEnvVar('EXPO_PUBLIC_ENV', 'development'),
@@ -44,9 +44,9 @@ export const ENV_CONFIG = {
 
 // Development Environment
 export const DEV_CONFIG = {
-  API_BASE_URL: 'http://192.168.100.171:5055',
-  SOCKET_URL: 'http://192.168.100.171:5055',
-  IMAGE_BASE_URL: 'http://192.168.100.171:5055/uploads/',
+  API_BASE_URL: 'https://e-commerce-backend-l0s0.onrender.com/api',
+  SOCKET_URL: 'https://e-commerce-backend-l0s0.onrender.com',
+  IMAGE_BASE_URL: 'https://e-commerce-backend-l0s0.onrender.com/uploads/',
   LOG_LEVEL: 'debug',
 };
 

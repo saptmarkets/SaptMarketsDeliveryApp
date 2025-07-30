@@ -64,9 +64,9 @@
       "eas": {
         "projectId": "your-expo-project-id"
       },
-      "EXPO_PUBLIC_API_BASE_URL": "http://192.168.100.171:5055",
-      "EXPO_PUBLIC_SOCKET_URL": "http://192.168.100.171:5055",
-      "EXPO_PUBLIC_IMAGE_BASE_URL": "http://192.168.100.171:5055/uploads/",
+      "EXPO_PUBLIC_API_BASE_URL": "https://e-commerce-backend-l0s0.onrender.com/api",
+      "EXPO_PUBLIC_SOCKET_URL": "https://e-commerce-backend-l0s0.onrender.com",
+      "EXPO_PUBLIC_IMAGE_BASE_URL": "https://e-commerce-backend-l0s0.onrender.com/uploads/",
       "EXPO_PUBLIC_ENV": "development",
       "EXPO_PUBLIC_API_TIMEOUT": "30000",
       "EXPO_PUBLIC_APP_NAME": "SaptMarkets Delivery",

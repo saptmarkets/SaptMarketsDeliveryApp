@@ -1,0 +1,37 @@
+// API Configuration for SaptMarkets Delivery App
+
+// Development local IP - Updated for physical device testing
+export const API_BASE_URL = 'http://192.168.100.119:5055/api';  // For Android Physical Device
+// export const API_BASE_URL = 'http://10.0.2.2:5055/api';  // For Android Emulator (points to localhost:5055)
+// export const API_BASE_URL = 'http://localhost:5055/api';  // For iOS Simulator
+
+// Socket connection
+export const SOCKET_URL = 'http://192.168.100.119:5055';
+
+// Image base URL
+export const IMAGE_BASE_URL = 'http://192.168.100.119:5055/uploads/';
+
+// API Endpoints
+export const API_ENDPOINTS = {
+  // Auth
+  LOGIN: '/delivery/login',
+  REGISTER: '/delivery/register',
+  PROFILE: '/delivery/profile',
+  UPDATE_PROFILE: '/delivery/update-profile',
+  
+  // Orders
+  ORDERS: '/delivery/orders',
+  ORDER_DETAILS: '/delivery/order/',
+  UPDATE_ORDER_STATUS: '/delivery/order/status',
+  AVAILABLE_ORDERS: '/delivery/available-orders',
+  
+  // Tracking
+  UPDATE_LOCATION: '/delivery/location',
+  
+  // Shift Management
+  START_SHIFT: '/delivery/shift/start',
+  END_SHIFT: '/delivery/shift/end',
+  
+  // Analytics
+  PERFORMANCE: '/delivery/performance'
+}; 
